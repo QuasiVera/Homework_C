@@ -42,6 +42,14 @@ void SortSelection(int array[], int size)
 	}
 }
 
+int ArrayToNum(int array[], int size)
+{
+	int num = 0;
+	for (int i = 0; i < size; i++)
+	
+		num =num*10 + array[i];
+	return num;
+}
 
 int main()
 {
@@ -51,7 +59,10 @@ int main()
 	int arr[size];
 	GetArray(arr, size, num);
 	SortSelection(arr, size);
-	PrintArray(arr, size);
+	//PrintArray(arr, size);
+	int res = ArrayToNum(arr, size);
+	//printf("\n");
+	printf("%d", res);
 	return 0;
 }
 
