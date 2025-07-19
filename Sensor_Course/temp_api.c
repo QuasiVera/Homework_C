@@ -124,7 +124,10 @@ void MonthStat1(struct sensor *info, int number, int month)
 //---------- Отлов и чтение ключей из командной строки
 int ScanKeys(char *file, int argc, char *argv[], int *pm)
 {
-	
+	if(argc<2)
+        printf("Это консольное приложение, которое осуществляет считывание текстового\
+            \nфайла csv, и выводит статистику по температуре за год или указанный месяц\
+            \nДля получения подробностей воспользуйтесь подсказкой -h");
 	int rez;
 	int flag = 0;
     while ((rez = getopt(argc, argv, "hm:f:")) != -1)
