@@ -128,6 +128,7 @@ int ScanKeys(char *file, int argc, char *argv[], int *pm)
         printf("Это консольное приложение, которое осуществляет считывание текстового\
             \nфайла csv, и выводит статистику по температуре за год или указанный месяц\
             \nДля получения подробностей воспользуйтесь подсказкой -h");
+    
 	int rez;
 	int flag = 0;
     while ((rez = getopt(argc, argv, "hm:f:")) != -1)
@@ -153,7 +154,7 @@ int ScanKeys(char *file, int argc, char *argv[], int *pm)
             }
             break;
         case 'f':
-            strncpy(file, optarg, strlen(optarg));
+            strncpy(file, optarg, strlen(optarg)+1);
             //printf("[%zu]\n", strlen(optarg));
             printf("принятый файл:[%s]\n", file);
 			flag = 1;
