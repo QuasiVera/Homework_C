@@ -151,8 +151,8 @@ int ScanKeys(char *file, int argc, char *argv[], int *pm)
             break;
         case 'f':
             strncpy(file, optarg, strlen(optarg));
-            printf("[%zu]\n", strlen(optarg));
-            printf("file:[%s]\n", file);
+            //printf("[%zu]\n", strlen(optarg));
+            printf("принятый файл:[%s]\n", file);
 			flag = 1;
             break;
         case '?':
@@ -222,7 +222,8 @@ int GetData(struct sensor *info, char *filename, int given_m)
         if (given_m==0)
         {
             avg_year/=(float)number;
-            printf("max year t = %d min year t = %d average year t = %.2f \n", max_year_t, min_year_t, avg_year);
+            printf("----------------------------------------------------------------\n");
+            printf("макс. t за год = %d\t мин. t за год = %d\t сред. t за год = %.2f \n", max_year_t, min_year_t, avg_year);
 			printf("----------------------------------------------------------------\n");
 		}
         return number;

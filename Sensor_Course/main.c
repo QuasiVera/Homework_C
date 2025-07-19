@@ -15,13 +15,11 @@
 int main(int argc, char *argv[])
 {
     setlocale(LC_ALL, "en_US.UTF-8");
-    // struct sensor info[SIZE];
     struct sensor *info = malloc(SIZE * sizeof(struct sensor));
     if (!info)
         return -1;
 
-    //free(info);
-    char file[FILENAME];
+    char file[FILENAME] = {0};
     int m = 0;
     int in_file = ScanKeys(file, argc, argv, &m);
 
