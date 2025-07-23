@@ -36,14 +36,14 @@ int PackStr(struct pack *pack1)
 			n++;
 		}
 	}
-  pack1[n].sym = p;
-  pack1[n].count = k;
-  return n;
+	pack1[n].sym = p;
+	pack1[n].count = k;
+	return n;
 }
 
 void PrintAnswer(struct pack *pack1,  int number)
 {
-	  for(int j = 0; j<=number; j++)
+	for(int j = 0; j<=number; j++)
 		printf("%c%d",pack1[j].sym,pack1[j].count);
 }
 
@@ -53,8 +53,8 @@ int main()
 	struct pack pack1[SIZE];
 	int n = PackStr(pack1);
 	PrintAnswer(pack1,n);
-  //printf("%c%d\n",p,k);
+	//printf("%c%d\n",p,k);
 
-  return 0;
+	return 0;
 }
 
